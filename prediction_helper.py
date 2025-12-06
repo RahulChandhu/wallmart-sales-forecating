@@ -9,7 +9,7 @@ import lightgbm as lgb  # noqa: F401  # needed so joblib can load the model
 
 # Paths (same structure as in the notebook)
 DATA_DIR = Path(".")
-OUT_DIR = Path("./outputs")
+OUT_DIR = Path(".")
 
 TRAIN_FILE = DATA_DIR / "train.csv"
 TEST_FILE = DATA_DIR / "test.csv"
@@ -267,4 +267,5 @@ def add_predictions_to_test(
     out = test_fe_sorted.copy()
     out["Predicted_Weekly_Sales"] = preds
     return out
+
 
