@@ -16,7 +16,7 @@ TEST_FILE = DATA_DIR / "test.csv"
 FEATURES_FILE = DATA_DIR / "features.csv"
 STORES_FILE = DATA_DIR / "stores.csv"
 
-MODEL_FILE = OUT_DIR / "final_lightgbm_model.joblib"
+MODEL_FILE = "final_lightgbm_model.joblib"
 
 TARGET_COL = "Weekly_Sales"
 
@@ -267,3 +267,4 @@ def add_predictions_to_test(
     out = test_fe_sorted.copy()
     out["Predicted_Weekly_Sales"] = preds
     return out
+
